@@ -100,17 +100,25 @@ Error Handling
 ## Python
 
 ### Menu Utama
-
+<img src="DOKUMENTASI/D_PYTHON/menu.png" width=300px>
+Error Handling
+<img src="DOKUMENTASI/D_PYTHON/menu_error.png" width=300px>
 ### Tambah Data
-
+<img src="DOKUMENTASI/D_PYTHON/tambah_data.png" width=300px>
+Error Handling
+<img src="DOKUMENTASI/D_PYTHON/tambah_data_error.png" width=300px>
 ### Tampilkan Data
-
+<img src="DOKUMENTASI/D_PYTHON/tampil_data0.png" width=300px>
+<img src="DOKUMENTASI/D_PYTHON/tampil_data1.png" width=300px>
 ### Update Data
-
-### Hapus Data
-
-### Cari Data
-
+<img src="DOKUMENTASI/D_PYTHON/update_data.png" width=300px>
+Error Handling
+<img src="DOKUMENTASI/D_PYTHON/update_data_error0.png" width=300px>
+<img src="DOKUMENTASI/D_PYTHON/update_data_error1.png" width=300px>
+### Hapus Data dan Error Handling
+<img src="DOKUMENTASI/D_PYTHON/hapus_data_dan_error.png" width=300px>
+### Cari Data dan Error Handling
+<img src="DOKUMENTASI/D_PYTHON/cari_data_dan_error.png" width=300px>
 ---
 
 ## PHP

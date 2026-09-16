@@ -11,9 +11,16 @@ def main():
     daftar_film[3] = Film(3, "Parasite", 2019, 132, 40000, "Thriller", "CJ Entertainment")
     daftar_film[4] = Film(4, "The Dark Knight", 2008, 152, 45000, "Action", "Warner Bros.")
 
+    # Menu
+    # Tambah Data: Menambah objek baru.
+    # Tampilkan Data: Menampilkan semua objek yang tersimpan.
+    # Update Data: Mengubah data objek berdasarkan identifier unik (seperti ID).
+    # Hapus Data: Menghapus objek berdasarkan identifier unik (ID).
+    # Cari Data: Mencari satu objek spesifik
     idx = 5
     berjalan = True
 
+    # Menggunakan perulangan agar tidak repot mengulang (run) program 
     while berjalan:
         print("==========================================")
         print("          SYSTEM MANAJEMEN DATA           ")
@@ -25,14 +32,17 @@ def main():
         print("5. Cari Data      (Mencari objek spesifik)")
         print("0. Keluar")
         print("==========================================")
-        
+
+        # Guard agar yang di input user merupakan angka
         try:
             pilihan = int(input("Pilih menu (0-5): "))
         except ValueError:
-            print("Pilihan harus berupa angka!")
+            print("Pilihan harus berupa angka! (0-5)")
             continue
         print()
 
+        # logika sederhana untuk menentukan fitur apa yang akan di jalankan program
+        # Berdasarkan keinginan user
         if pilihan == 1:
             if idx >= len(daftar_film):
                 print(f"-> Gagal! Kapasitas penyimpanan film penuh (Maksimal {len(daftar_film)} film).")

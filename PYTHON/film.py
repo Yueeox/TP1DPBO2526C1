@@ -21,6 +21,9 @@ class Film:
         print(f"{'Genre':<18} : {self.__genre}")
         print(f"{'Rumah Produksi':<18} : {self.__rumahProduksi}")
 
+    # Membuat Objek yang didalamnya memiliki beberapa error handling agar data yang nantinya di simpan
+    # tidak melenceng dari akal
+    # karena tidak mungkin ada film berdurasi minus, harga minus, bahkan lebih tua dari tahun 1888
     # Method - Setter Gabungan
     def set_film(self, id_film, judul, tahun, durasi, harga, genre, rumah_produksi):
         self.__id = id_film
