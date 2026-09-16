@@ -4,11 +4,11 @@
 
 # Janji
 
-Saya [Nama Anda] dengan NIM [NIM Anda] mengerjakan TP 1 dalam mata kuliah Desain dan Pemrograman Berorientasi Objek untuk keberkahanNya maka saya tidak melakukan kecurangan seperti yang telah dispesifikasikan. Aamiin.
+Saya Wingko Prajna dengan NIM 2503358 mengerjakan TP 1 dalam mata kuliah Desain dan Pemrograman Berorientasi Objek untuk keberkahanNya maka saya tidak melakukan kecurangan seperti yang telah dispesifikasikan. Aamiin.
 
 # Desain Program
 
-Program menggunakan konsep OOP (Class dan Enkapsulasi) pada 4 bahasa pemrograman (Java, C++, Python, dan PHP) dengan array of objects berkapasitas maksimal 10 data.
+Program menggunakan konsep OOP (Class dan Enkapsulasi) pada 4 bahasa pemrograman (Java, C++, Python, dan PHP) dengan array of objects berkapasitas maksimal 10 data hanya sebagai percontohan.
 
 Atribut pada kelas `Film` terdiri dari:
 
@@ -51,17 +51,22 @@ Program menyediakan 6 pilihan menu utama:
 ## Java
 
 ### Menu Utama
-
+![Menu](DOKUMENTASI/D_JAVA/menu.png)
+![Menu Error](DOKUMENTASI/D_JAVA/menu_error.png)
 ### Tambah Data
-
+![Tambah Data](DOKUMENTASI/D_JAVA/tambah_data.png)
+![Tambah Data Error](DOKUMENTASI/D_JAVA/tambah_data_error.png)
 ### Tampilkan Data
-
+![Tampil Data](DOKUMENTASI/D_JAVA/tampil0_data.png)
+![Tampil Data](DOKUMENTASI/D_JAVA/tampil1_data.png)
 ### Update Data
-
+![Update Data](DOKUMENTASI/D_JAVA/update0_data.png)
+![Update Data](DOKUMENTASI/D_JAVA/update1_data.png)
+![Update Data Error](DOKUMENTASI/D_JAVA/update_data_error.png)
 ### Hapus Data
-
+![Hapus Data dan Error](DOKUMENTASI/D_JAVA/hapus_data_dan_error.png)
 ### Cari Data
-
+![Cari Data dan Error](DOKUMENTASI/D_JAVA/cari_data_dan_error.png)
 ---
 
 ## C++

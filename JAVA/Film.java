@@ -15,7 +15,13 @@ public class Film {
     public Film(int id, String judul, int tahun, int durasiMenit, int harga, String genre, String rumahProduksi){
         this.id = id;
         this.judul = judul;
-        this.tahun = tahun;
+        if (tahun >= 1888){
+            this.tahun = tahun; 
+        } else {
+            System.out.println("Film pertama di dunia dibuat pada tahun 1888 dengan judul Roundhay Garden");
+            System.out.println("Masukan Tahun diubah menjadi 1888!");
+            this.tahun = 1888;
+        }
         this.durasiMenit = durasiMenit;
         this.harga = harga;
         this.genre = genre;
@@ -41,8 +47,16 @@ public class Film {
         this.id = id;
         this.judul = judul;
         this.tahun = tahun;
-        this.durasiMenit = durasiMenit;
-        this.harga = harga;
+        if (durasiMenit > 0){
+            this.durasiMenit = durasiMenit; 
+        } else {
+            this.durasiMenit = 0;
+        }
+        if(harga > 0){
+            this.harga = harga;
+        }else{
+            this.harga = 0;
+        }
         this.genre = genre;
         this.rumahProduksi = rumahProduksi;
     }
