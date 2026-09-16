@@ -20,6 +20,13 @@ int main() {
     bool berjalan = true;
     int pilihan;
 
+    /*Menu 
+    Tambah Data: Menambah objek baru.
+    Tampilkan Data: Menampilkan semua objek yang tersimpan.
+    Update Data: Mengubah data objek berdasarkan identifier unik (seperti ID).
+    Hapus Data: Menghapus objek berdasarkan identifier unik (ID).
+    Cari Data: Mencari satu objek spesifik*/
+
     while (berjalan) {
         cout << "==========================================\n";
         cout << "          SYSTEM MANAJEMEN DATA           \n";
@@ -35,6 +42,7 @@ int main() {
         cin >> pilihan;
         cout << "\n";
 
+        /* case untuk menentukan fitur apa yang akan digunakan*/
         switch (pilihan) {
             case 1: {
                 if (idx >= 10) {

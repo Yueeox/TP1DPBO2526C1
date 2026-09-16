@@ -76,17 +76,25 @@ Error Handling
 ## C++
 
 ### Menu Utama
-
+<img src="DOKUMENTASI/D_CPP/menu.png" width=300px>
+Error Handling
+<img src="DOKUMENTASI/D_CPP/menu_error.png" width=300px>
 ### Tambah Data
-
+<img src="DOKUMENTASI/D_CPP/tambah_data.png" width=300px>
+Error Handling
+<img src="DOKUMENTASI/D_CPP/tambah_data_error.png" width=300px>
 ### Tampilkan Data
-
+<img src="DOKUMENTASI/D_CPP/tampil_data0.png" width=300px>
+<img src="DOKUMENTASI/D_CPP/tampil_data1.png" width=300px>
 ### Update Data
-
-### Hapus Data
-
-### Cari Data
-
+<img src="DOKUMENTASI/D_CPP/update_data.png" width=300px>
+Error Handling
+<img src="DOKUMENTASI/D_CPP/update_data_error0.png" width=300px>
+<img src="DOKUMENTASI/D_CPP/update_data_error1.png" width=300px>
+### Hapus Data dan Error Handling
+<img src="DOKUMENTASI/D_CPP/hapus_data_dan_error.png" width=300px>
+### Cari Data dan Error Handling
+<img src="DOKUMENTASI/D_CPP/cari_data_dan_error.png" width=300px>
 ---
 
 ## Python

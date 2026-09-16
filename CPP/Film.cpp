@@ -12,19 +12,38 @@ private:
 
 public:
     /* Constructor */
-    Film() : id(0), tahun(0), durasiMenit(0), harga(0) {}
-
+    Film(){};
+    /* Destrucktor */
+    ~Film(){};
+    /* Membuat Objek yang didalamnya memiliki beberapa error handling agar data yang nantinya di simpan
+    tidak melenceng dari akal
+    karena tidak mungkin ada film berdurasi minus, harga minus, bahkan lebih tua dari tahun 1888 */
     Film(int id, string judul, int tahun, int durasiMenit, int harga, string genre, string rumahProduksi) {
         this->id = id;
         this->judul = judul;
-        this->tahun = tahun;
-        this->durasiMenit = durasiMenit;
-        this->harga = harga;
+        if (tahun >= 1888) {
+            this->tahun = tahun;
+        } else {
+            cout << "Film pertama di dunia dibuat pada tahun 1888 dengan judul Roundhay Garden\n";
+            cout << "Masukan Tahun diubah menjadi 1888!\n";
+            this->tahun = 1888;
+        }
+        if (durasiMenit > 0) {
+            this->durasiMenit = durasiMenit;
+        } else {
+            this->durasiMenit = 0;
+        }
+        if (harga > 0) {
+            this->harga = harga;
+        } else {
+            this->harga = 0;
+        }
         this->genre = genre;
         this->rumahProduksi = rumahProduksi;
     }
 
     /* Method - Print Detail */
+    /*Menampilkan data menggunakan getter */
     void getFilm() {
         cout << "=============================================\n";
         cout << "               DETAIL FILM                   \n";
