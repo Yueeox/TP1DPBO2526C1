@@ -4,11 +4,11 @@
 
 # Janji
 
-Saya [Nama Anda] dengan NIM [NIM Anda] mengerjakan TP 1 dalam mata kuliah Desain dan Pemrograman Berorientasi Objek untuk keberkahanNya maka saya tidak melakukan kecurangan seperti yang telah dispesifikasikan. Aamiin.
+Saya Wingko Prajna dengan NIM 2503358 mengerjakan TP 1 dalam mata kuliah Desain dan Pemrograman Berorientasi Objek untuk keberkahanNya maka saya tidak melakukan kecurangan seperti yang telah dispesifikasikan. Aamiin.
 
 # Desain Program
 
-Program menggunakan konsep OOP (Class dan Enkapsulasi) pada 4 bahasa pemrograman (Java, C++, Python, dan PHP) dengan array of objects berkapasitas maksimal 10 data.
+Program menggunakan konsep OOP (Class dan Enkapsulasi) pada 4 bahasa pemrograman (Java, C++, Python, dan PHP) dengan array of objects berkapasitas maksimal 10 data hanya sebagai percontohan.
 
 Atribut pada kelas `Film` terdiri dari:
 
