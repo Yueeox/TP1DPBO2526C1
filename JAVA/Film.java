@@ -12,6 +12,9 @@ public class Film {
     /*Constructor */
     public Film(){}
 
+    /* Membuat Objek yang didalamnya memiliki beberapa error handling agar data yang nantinya di simpan
+    tidak melenceng dari akal
+    karena tidak mungkin ada film berdurasi minus, harga minus, bahkan lebih tua dari tahun 1888 */
     public Film(int id, String judul, int tahun, int durasiMenit, int harga, String genre, String rumahProduksi){
         this.id = id;
         this.judul = judul;
@@ -29,6 +32,7 @@ public class Film {
     }
 
     /*Method - Getter */
+    /*Menampilkan data menggunakan getter */
     public void getFilm(){
         System.out.println("=============================================");
         System.out.println("               DETAIL FILM                   ");
@@ -42,7 +46,8 @@ public class Film {
         System.out.printf("%-18s : %s\n", "Rumah Produksi", this.rumahProduksi);
     }
     /*Method - Setter */
-
+    /*Setter di sini digunakan untuk pilihan UPDATE
+    dan masih dengan error handling yang sama seperti Consturctor di atas */
     public void setFilm(int id, String judul, int tahun, int durasiMenit, int harga, String genre, String rumahProduksi){
         this.id = id;
         this.judul = judul;

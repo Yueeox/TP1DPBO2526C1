@@ -24,6 +24,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         boolean berjalan = true;
 
+        /*Menggunakan perulangan agar tidak repot mengulang (run) program */
         while (berjalan) {
             System.out.println("==========================================");
             System.out.println("          SYSTEM MANAJEMEN DATA           ");
@@ -39,7 +40,7 @@ public class Main {
 
             int pilihan = sc.nextInt();
             System.out.println();
-
+            /*case sederhana yang akan menentukan fitur apa yang akan digunakan */
             switch (pilihan) {
                 case 1:
                     // 1. Cek apakah kapasitas array masih mencukupi
