@@ -37,7 +37,7 @@ Program menyediakan 6 pilihan menu utama:
 
 
 2. **Tampilkan Data**: Program melakukan perulangan (*looping*) pada array/list film untuk menampilkan seluruh data film yang tersimpan (tidak bernilai `null`/kosong).
-3. **Update Data**: User memasukkan ID film target. Jika ID ditemukan, program menampilkan sub-menu untuk memilih atribut spesifik yang ingin diubah (Judul, Tahun, Durasi, Harga, Genre, atau Rumah Produksi), lalu memperbarui atribut tersebut via *setter*.
+3. **Update Data**: User memasukkan ID film target. Jika ID ditemukan, program menampilkan sub-menu untuk memilih atribut spesifik yang ingin diubah (Judul, Tahun, Durasi, Harga, Genre, atau Rumah Produksi), lalu memperbarui atribut tersebut via *setter* yang sudah memiliki error handling jika update yang dilakukan tidak sesuai.
 4. **Hapus Data**: User memasukkan ID film target. Jika ID ditemukan, data film dihapus dengan menggeser elemen-elemen array setelahnya ke kiri (*shift left*) agar data tetap rapat tanpa jeda kosong.
 5. **Cari Data**: User memasukkan ID film target. Jika ID cocok, program akan mencetak detail film tersebut secara spesifik.
 6. **Keluar**: Menghentikan perulangan menu dan menutup program.
@@ -51,22 +51,26 @@ Program menyediakan 6 pilihan menu utama:
 ## Java
 
 ### Menu Utama
-![Menu](DOKUMENTASI/D_JAVA/menu.png)
-![Menu Error](DOKUMENTASI/D_JAVA/menu_error.png)
+<img src="DOKUMENTASI/D_JAVA/menu.png" width=300px>
+Error Handling
+<img src="DOKUMENTASI/D_JAVA/menu_error.png" width=300px>
 ### Tambah Data
-![Tambah Data](DOKUMENTASI/D_JAVA/tambah_data.png)
-![Tambah Data Error](DOKUMENTASI/D_JAVA/tambah_data_error.png)
+<img src="DOKUMENTASI/D_JAVA/tambah_data.png" width=300px>
+Error Handling
+<img src="DOKUMENTASI/D_JAVA/tambah_data_error.png" width=300px>
 ### Tampilkan Data
-![Tampil Data](DOKUMENTASI/D_JAVA/tampil0_data.png)
-![Tampil Data](DOKUMENTASI/D_JAVA/tampil1_data.png)
+<img src="DOKUMENTASI/D_JAVA/tampil_data0.png" width=300px>
+<img src="DOKUMENTASI/D_JAVA/tampil_data1.png" width=300px>
 ### Update Data
-![Update Data](DOKUMENTASI/D_JAVA/update0_data.png)
-![Update Data](DOKUMENTASI/D_JAVA/update1_data.png)
-![Update Data Error](DOKUMENTASI/D_JAVA/update_data_error.png)
-### Hapus Data
-![Hapus Data dan Error](DOKUMENTASI/D_JAVA/hapus_data_dan_error.png)
-### Cari Data
-![Cari Data dan Error](DOKUMENTASI/D_JAVA/cari_data_dan_error.png)
+<img src="DOKUMENTASI/D_JAVA/update_data0.png" width=300px>
+<img src="DOKUMENTASI/D_JAVA/update_data1.png" width=300px>
+Error Handling
+<img src="DOKUMENTASI/D_JAVA/update_data_error0.png" width=300px>
+<img src="DOKUMENTASI/D_JAVA/update_data_error1.png" width=300px>
+### Hapus Data dan Error Handling
+<img src="DOKUMENTASI/D_JAVA/hapus_data_dan_error.png" width=300px>
+### Cari Data dan Error Handling
+<img src="DOKUMENTASI/D_JAVA/cari_data_dan_error.png" width=300px>
 ---
 
 ## C++
