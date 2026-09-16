@@ -1,6 +1,6 @@
 <?php
-require_once 'Film.php';
-session_start();
+require_once 'Film.php';   // memanggil class Film
+session_start();           // memulai session untuk menyimpan data
 
 // Inisialisasi data dummy di session jika belum ada
 if (!isset($_SESSION['daftarFilm'])) {
@@ -13,18 +13,20 @@ if (!isset($_SESSION['daftarFilm'])) {
     ];
 }
 
-$pesan = "";
-$hasilCari = null;
+$pesan = "";           // pesan notifikasi ke user
+$hasilCari = null;     // menampung film hasil pencarian
 
-// Handling Form Submission
+// ===== Handling Form Submission =====
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $aksi = $_POST['aksi'] ?? '';
+    $aksi = $_POST['aksi'] ?? '';  // ambil aksi yang dipilih
 
+    // --- Aksi Tambah Data ---
     if ($aksi === 'tambah') {
+        // Cek kapasitas maksimal 10 film
         if (count($_SESSION['daftarFilm']) >= 10) {
             $pesan = "Gagal! Kapasitas penyimpanan film sudah penuh (Maksimal 10 film).";
         } else {
-            $idBaru = count($_SESSION['daftarFilm']);
+            $idBaru = count($_SESSION['daftarFilm']);  // ID otomatis berdasarkan jumlah data
             $filmBaru = new Film();
             $filmBaru->setFilm(
                 $idBaru,
@@ -35,16 +37,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $_POST['genre'],
                 $_POST['rumahProduksi']
             );
-            $_SESSION['daftarFilm'][] = $filmBaru;
+            $_SESSION['daftarFilm'][] = $filmBaru;   // simpan ke session
             $pesan = "Film \"{$_POST['judul']}\" berhasil ditambahkan!";
         }
     } 
+    // --- Aksi Update Data ---
     elseif ($aksi === 'update') {
         $targetId = (int)$_POST['targetId'];
-        $opsi = $_POST['opsiUpdate'];
-        $nilai = $_POST['nilaiBaru'];
+        $opsi = $_POST['opsiUpdate'];      // atribut yang mau diubah
+        $nilai = $_POST['nilaiBaru'];      // nilai baru
         $ditemukan = false;
 
+        // Cari film berdasarkan ID, lalu ubah atribut yang dipilih
         foreach ($_SESSION['daftarFilm'] as $film) {
             if ($film->getId() === $targetId) {
                 $ditemukan = true;
@@ -62,10 +66,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
         if (!$ditemukan) $pesan = "Film dengan ID {$targetId} tidak ditemukan!";
     } 
+    // --- Aksi Hapus Data ---
     elseif ($aksi === 'hapus') {
         $targetId = (int)$_POST['targetId'];
         $indeksHapus = -1;
 
+        // Cari indeks film berdasarkan ID
         foreach ($_SESSION['daftarFilm'] as $index => $film) {
             if ($film->getId() === $targetId) {
                 $indeksHapus = $index;
@@ -75,25 +81,27 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         if ($indeksHapus !== -1) {
             $judulTerhapus = $_SESSION['daftarFilm'][$indeksHapus]->getJudul();
-            array_splice($_SESSION['daftarFilm'], $indeksHapus, 1);
+            array_splice($_SESSION['daftarFilm'], $indeksHapus, 1);  // hapus dari array
             $pesan = "Film \"{$judulTerhapus}\" (ID: {$targetId}) berhasil dihapus!";
         } else {
             $pesan = "Film dengan ID {$targetId} tidak ditemukan!";
         }
     } 
+    // --- Aksi Cari Data ---
     elseif ($aksi === 'cari') {
         $targetId = (int)$_POST['targetId'];
         foreach ($_SESSION['daftarFilm'] as $film) {
             if ($film->getId() === $targetId) {
-                $hasilCari = $film;
+                $hasilCari = $film;   // simpan hasil untuk ditampilkan
                 break;
             }
         }
         if (!$hasilCari) $pesan = "Film dengan ID {$targetId} tidak ditemukan!";
     }
+    // --- Aksi Reset ke Data Awal ---
     elseif ($aksi === 'reset') {
-        unset($_SESSION['daftarFilm']);
-        header("Location: index.php");
+        unset($_SESSION['daftarFilm']);      // hapus semua data
+        header("Location: index.php");       // refresh halaman
         exit;
     }
 }
@@ -105,6 +113,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <title>Sistem Manajemen Data Film</title>
     <style>
+        /* Styling tampilan halaman */
         body { font-family: Arial, sans-serif; margin: 20px; background-color: #f4f6f9; }
         .container { max-width: 900px; margin: auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
         .card { border: 1px solid #ddd; padding: 15px; margin-bottom: 20px; border-radius: 6px; }
@@ -121,11 +130,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <div class="container">
     <h2>Sistem Manajemen Data Film</h2>
 
+    <!-- Tampilkan pesan notifikasi jika ada -->
     <?php if ($pesan): ?>
         <div class="alert"><?= $pesan ?></div>
     <?php endif; ?>
 
-    <!-- Menu Form Tambah Data -->
+    <!-- ===== Form Tambah Data ===== -->
     <div class="card">
         <h3>1. Tambah Data Film Baru</h3>
         <form method="POST">
@@ -140,7 +150,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </form>
     </div>
 
-    <!-- Menu Form Update Data -->
+    <!-- ===== Form Update Data ===== -->
     <div class="card">
         <h3>3. Update Data Film via ID</h3>
         <form method="POST">
@@ -162,8 +172,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </form>
     </div>
 
-    <!-- Menu Form Hapus & Cari -->
+    <!-- ===== Form Hapus & Cari (berdampingan) ===== -->
     <div style="display: flex; gap: 20px;">
+        <!-- Form Hapus -->
         <div class="card" style="flex: 1;">
             <h3>4. Hapus Data Film</h3>
             <form method="POST">
@@ -173,6 +184,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </form>
         </div>
 
+        <!-- Form Cari -->
         <div class="card" style="flex: 1;">
             <h3>5. Cari Data Film</h3>
             <form method="POST">
@@ -183,7 +195,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
     </div>
 
-    <!-- Hasil Cari -->
+    <!-- ===== Hasil Pencarian (hanya muncul jika ada) ===== -->
     <?php if ($hasilCari): ?>
         <h3>Hasil Pencarian:</h3>
         <?= $hasilCari->getFilm() ?>
@@ -191,18 +203,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <hr>
 
-    <!-- Menu Tampilkan Semua Data (Tampilan Otomatis) -->
+    <!-- ===== Tampilkan Semua Data Film ===== -->
     <h3>2. Daftar Semua Film Simpanan (Total: <?= count($_SESSION['daftarFilm']) ?>/10)</h3>
     <?php 
     if (empty($_SESSION['daftarFilm'])) {
-        echo "<p>Tidak ada data film.</p>";
+        echo "<p>Tidak ada data film.</p>";   // jika data kosong
     } else {
         foreach ($_SESSION['daftarFilm'] as $film) {
-            echo $film->getFilm();
+            echo $film->getFilm();            // tampilkan setiap film
         }
     }
     ?>
 
+    <!-- ===== Tombol Reset ke Data Dummy ===== -->
     <form method="POST" style="margin-top: 20px;">
         <input type="hidden" name="aksi" value="reset">
         <button type="submit" style="background-color: #6c757d;">Reset ke Data Dummy Awal</button>

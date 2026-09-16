@@ -124,11 +124,33 @@ Error Handling
 ## PHP
 
 ### Tampilan Utama & Daftar Film
+<img src="DOKUMENTASI/D_PHP/menu0.png" width=300px>
+<img src="DOKUMENTASI/D_PHP/menu1.png" width=300px>
+<img src="DOKUMENTASI/D_PHP/tampil_data0.png" width=300px>
+<img src="DOKUMENTASI/D_PHP/tampil_data1.png" width=300px>
 
 ### Form Tambah Data
+<img src="DOKUMENTASI/D_PHP/input_data0.png" width=300px>
+<img src="DOKUMENTASI/D_PHP/input_data1.png" width=300px>
+<img src="DOKUMENTASI/D_PHP/input_data2.png" width=300px>
+Error Handling
+<img src="DOKUMENTASI/D_PHP/input_data_error0.png" width=300px>
+<img src="DOKUMENTASI/D_PHP/input_data_error1.png" width=300px>
 
 ### Form Update Data
+<img src="DOKUMENTASI/D_PHP/update_data0.png" width=300px>
+<img src="DOKUMENTASI/D_PHP/update_data1.png" width=300px>
+Error Handling
+<img src="DOKUMENTASI/D_PHP/update_data_error0.png" width=300px>
+<img src="DOKUMENTASI/D_PHP/update_data_error1.png" width=300px>
 
 ### Form Hapus & Cari Data
+<img src="DOKUMENTASI/D_PHP/hapus_data0.png" width=300px>
+<img src="DOKUMENTASI/D_PHP/hapus_data1.png" width=300px>
+<img src="DOKUMENTASI/D_PHP/hapus_data_error.png" width=300px>
+<img src="DOKUMENTASI/D_PHP/cari_data0.png" width=300px>
+<img src="DOKUMENTASI/D_PHP/cari_data1.png" width=300px>
+<img src="DOKUMENTASI/D_PHP/cari_data_error.png" width=300px>
 
 ### Hasil Pencarian
+<img src="DOKUMENTASI/D_PHP/cari_data1.png" width=300px>
