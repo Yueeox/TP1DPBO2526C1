@@ -206,13 +206,39 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <!-- ===== Tampilkan Semua Data Film ===== -->
     <h3>2. Daftar Semua Film Simpanan (Total: <?= count($_SESSION['daftarFilm']) ?>/10)</h3>
     <?php 
-    if (empty($_SESSION['daftarFilm'])) {
-        echo "<p>Tidak ada data film.</p>";   // jika data kosong
-    } else {
-        foreach ($_SESSION['daftarFilm'] as $film) {
-            echo $film->getFilm();            // tampilkan setiap film
+        if (empty($_SESSION['daftarFilm'])) {
+            echo "<p>Tidak ada data film.</p>";   // jika data kosong
+        } else {
+            // Daftar gambar untuk film statis (berdasarkan urutan ID)
+            $daftarGambar = [
+                0 => 'images/spiderman.jfif',
+                1 => 'images/oppenheimer.jfif',
+                2 => 'images/dune.jfif',
+                3 => 'images/parasite.jfif',
+                4 => 'images/thedarknight.jfif'
+            ];
+            
+            foreach ($_SESSION['daftarFilm'] as $film) {
+                $id = $film->getId();
+                $adaGambar = isset($daftarGambar[$id]) && file_exists($daftarGambar[$id]);
+                
+                echo "<div style='display:flex; align-items:flex-start; gap:15px; margin-bottom:15px;'>";
+                
+                // Poster di kiri
+                if ($adaGambar) {
+                    echo "<div style='flex-shrink:0;'>";
+                    echo "<img src='{$daftarGambar[$id]}' alt='Poster Film' style='width:100px; border-radius:8px;'>";
+                    echo "</div>";
+                }
+                
+                // Detail film di kanan
+                echo "<div style='flex:1;'>";
+                echo $film->getFilm();
+                echo "</div>";
+                
+                echo "</div>";
+            }
         }
-    }
     ?>
 
     <!-- ===== Tombol Reset ke Data Dummy ===== -->

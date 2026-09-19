@@ -126,8 +126,9 @@ Error Handling
 ### Tampilan Utama & Daftar Film
 <img src="DOKUMENTASI/D_PHP/menu0.png" width=300px>
 <img src="DOKUMENTASI/D_PHP/menu1.png" width=300px>
-<img src="DOKUMENTASI/D_PHP/tampil_data0.png" width=300px>
-<img src="DOKUMENTASI/D_PHP/tampil_data1.png" width=300px>
+<img src="DOKUMENTASI/D_PHP/tampil_data2.png" width=300px>
+<img src="DOKUMENTASI/D_PHP/tampil_data3.png" width=300px>
+<img src="DOKUMENTASI/D_PHP/tampil_data4.png" width=300px>
 
 ### Form Tambah Data
 <img src="DOKUMENTASI/D_PHP/input_data0.png" width=300px>
